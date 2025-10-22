@@ -20,9 +20,9 @@ export default function SobreMi() {
           Hola, mi nombre es <span className="text-primary">Saray Noguera</span>
         </h1>
         
-        <div className="grid md:grid-cols-[300px_1fr] gap-8 card p-6 md:p-8">
+        <div className="grid md:grid-cols-[280px_1fr] gap-6 md:gap-8 card p-6 md:p-8">
           <div className="flex justify-center">
-            <div className="w-64 h-64 rounded-full overflow-hidden bg-secondary">
+            <div className="w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden bg-secondary">
               {/* Placeholder para la imagen de perfil */}
               <div className="w-full h-full flex items-center justify-center text-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -34,19 +34,20 @@ export default function SobreMi() {
           </div>
           
           <div>
-            <p className="text-lg mb-6">
-              Soy estudiante universitaria de Ingeniería de software. Me interesa mucho el desarrollo de proyectos tecnológicos, la programación y aprender nuevas herramientas digitales.
-            </p>
-            <p className="text-lg mb-6">
-              En mi tiempo libre disfruto de la música, la lectura, los viajes y compartir con mis amigos y familia.
-            </p>
+            <p className="text-base md:text-lg mb-6">
+               Soy estudiante universitaria de Ingeniería de software. Me interesa mucho el desarrollo de proyectos tecnológicos, la programación y aprender nuevas herramientas digitales.
+             </p>
+            <p className="text-base md:text-lg mb-6">
+               En mi tiempo libre disfruto de la música, la lectura, los viajes y compartir con mis amigos y familia.
+             </p>
             <button className="btn">
               Conocerme un poco más
             </button>
           </div>
         </div>
         
-        <div className="mt-12 grid md:grid-cols-2 gap-8">
+-        <div className="mt-12 grid md:grid-cols-2 gap-8">
++        <div className="mt-12 grid md:grid-cols-2 gap-6 md:gap-8">
           <div className="card">
             <h2 className="text-2xl font-semibold text-primary mb-4">Mis Habilidades</h2>
             <div className="grid grid-cols-1 gap-4">

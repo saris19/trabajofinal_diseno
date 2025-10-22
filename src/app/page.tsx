@@ -27,7 +27,7 @@ export default function Home() {
     <main className="min-h-screen p-4 md:p-8">
       
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center min-h-[80vh] text-center relative overflow-hidden">
+      <section className="flex flex-col items-center justify-center min-h-[80vh] text-center relative overflow-hidden px-4 sm:px-6 lg:px-8">
         {/* Fondo animado */}
         <div className="absolute inset-0 -z-10">
           {/* Espiral morada principal */}

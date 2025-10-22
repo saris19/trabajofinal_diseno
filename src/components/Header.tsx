@@ -33,7 +33,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 px-4 py-4 bg-white/80 backdrop-blur-sm shadow-sm">
       <div className="max-w-7xl mx-auto">
         {/* Desktop Layout - Centrado */}
-        <div className="hidden md:flex justify-center items-center gap-8 flex-wrap">
+        <div className="hidden md:flex justify-center items-center gap-x-6 gap-y-3 flex-wrap">
           {/* Logo */}
           <button 
             onClick={triggerBlobAnimation} 
@@ -47,7 +47,7 @@ export default function Header() {
 
           {/* Navigation */}
           <nav className="flex-1 flex justify-center">
-            <ul className="flex items-center gap-2">
+            <ul className="flex items-center gap-2 flex-wrap justify-center">
               <li>
                 <Link 
                   href="/" 
@@ -102,7 +102,7 @@ export default function Header() {
           </nav>
 
           {/* Theme Toggle y Language Selector */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 flex-shrink-0">
             <ThemeToggle />
             <LanguageSelector />
           </div>

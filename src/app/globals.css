@@ -287,6 +287,9 @@ body.dark-mode button {
   border: 1px solid #7c3aed;
   box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
   transition: all 0.3s ease;
+  /* Forzar visibilidad sobre capas con mix-blend u overlays */
+  position: relative;
+  z-index: 20;
 }
 
 body.dark-mode .btn:hover,
@@ -496,6 +499,9 @@ body {
   gap: 0.5rem;
   font-weight: 500;
   transition: all 0.3s ease;
+  /* Asegurar que el botón esté por encima de los fondos/efectos */
+  position: relative;
+  z-index: 20;
 }
 
 .btn:hover {
