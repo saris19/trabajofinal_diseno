@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
+// Removed unused Image import
 import SocialLinks from '@/components/SocialLinks';
 import { useEffect, useState } from 'react';
 

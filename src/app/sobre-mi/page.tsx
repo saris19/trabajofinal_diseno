@@ -1,6 +1,6 @@
 import LanguageSelector from '@/components/LanguageSelector';
 import Link from 'next/link';
-import Image from 'next/image';
+// Removed unused Image import
 
 export default function SobreMi() {
   return (

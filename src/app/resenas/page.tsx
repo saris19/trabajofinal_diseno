@@ -1,6 +1,5 @@
 import LanguageSelector from '@/components/LanguageSelector';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Resenas() {
   return (
@@ -35,7 +34,7 @@ export default function Resenas() {
               </div>
             </div>
             <p className="text-center mb-4">
-              "Saray es una desarrolladora excepcional. Su capacidad para resolver problemas y su atención al detalle hacen que sea un placer trabajar con ella."
+              &quot;Saray es una desarrolladora excepcional. Su capacidad para resolver problemas y su atención al detalle hacen que sea un placer trabajar con ella.&quot;
             </p>
             <div className="text-center">
               <h3 className="font-semibold">Carlos Rodríguez</h3>
@@ -57,7 +56,7 @@ export default function Resenas() {
               </div>
             </div>
             <p className="text-center mb-4">
-              "Colaborar con Saray fue una experiencia increíble. Su conocimiento técnico y su capacidad para comunicar ideas complejas de manera sencilla son impresionantes."
+              &quot;Colaborar con Saray fue una experiencia increíble. Su conocimiento técnico y su capacidad para comunicar ideas complejas de manera sencilla son impresionantes.&quot;
             </p>
             <div className="text-center">
               <h3 className="font-semibold">Ana Martínez</h3>
@@ -79,7 +78,7 @@ export default function Resenas() {
               </div>
             </div>
             <p className="text-center mb-4">
-              "Saray entregó un proyecto excepcional que superó todas nuestras expectativas. Su enfoque metódico y su creatividad hacen que sea una desarrolladora de primer nivel."
+              &quot;Saray entregó un proyecto excepcional que superó todas nuestras expectativas. Su enfoque metódico y su creatividad hacen que sea una desarrolladora de primer nivel.&quot;
             </p>
             <div className="text-center">
               <h3 className="font-semibold">Miguel López</h3>
