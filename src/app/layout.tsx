@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="light">
+    <html lang="es">
       <body className={`${poppins.className} antialiased transition-colors duration-300 bg-white dark:bg-gray-900 text-gray-900 dark:text-white`}>
         <ThemeProvider>
           <Header />

@@ -34,7 +34,7 @@ export default function Contacto() {
               </div>
               <div>
                 <h3 className="text-sm font-medium uppercase">CORREO</h3>
-                <p className="text-sm">saraynoguera@gmail.com</p>
+                <p className="text-sm">saraynoguera21@gmail.com</p>
               </div>
             </div>
           </div>
