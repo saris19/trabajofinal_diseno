@@ -33,7 +33,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 px-4 py-4 bg-white/80 backdrop-blur-sm shadow-sm">
       <div className="max-w-7xl mx-auto">
         {/* Desktop Layout - Centrado */}
-        <div className="hidden md:flex justify-center items-center gap-x-6 gap-y-3 flex-wrap">
+        <div className="hidden md:flex items-center justify-between gap-x-6">
           {/* Logo */}
           <button 
             onClick={triggerBlobAnimation} 
@@ -109,7 +109,7 @@ export default function Header() {
         </div>
 
         {/* Mobile Layout */}
-        <div className="md:hidden flex justify-between items-center">
+        <div className="md:hidden flex justify-between items-center z-50">
           {/* Logo y Theme Toggle */}
           <div className="flex items-center gap-3">
             <button 
@@ -129,6 +129,7 @@ export default function Header() {
             onClick={toggleMenu}
             className="bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-md flex items-center justify-center"
             aria-label="Menú"
+            aria-expanded={isMenuOpen}
           >
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
