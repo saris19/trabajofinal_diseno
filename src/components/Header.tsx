@@ -36,7 +36,7 @@ export default function Header() {
             <button 
               onClick={triggerBlobAnimation} 
               className="flex items-center focus:outline-none"
-              aria-label="Animar fondo"
+              aria-label={t('header.animate_bg')}
             >
               <div className={`w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center ${animateBlob ? 'animate-spin-slow' : 'animate-pulse hover:animate-none'} transition-all`}>
                 <span className="text-primary font-bold text-lg">SN</span>
@@ -116,7 +116,7 @@ export default function Header() {
               <button 
                 onClick={triggerBlobAnimation} 
                 className="flex items-center focus:outline-none"
-                aria-label="Animar fondo"
+                aria-label={t('header.animate_bg')}
               >
                 <div className={`w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center ${animateBlob ? 'animate-spin-slow' : 'animate-pulse hover:animate-none'} transition-all`}>
                   <span className="text-primary font-bold text-lg">SN</span>

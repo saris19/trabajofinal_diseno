@@ -1,7 +1,10 @@
+'use client';
 import LanguageSelector from '@/components/LanguageSelector';
 import Link from 'next/link';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function Proyectos() {
+  const { t } = useLanguage();
   return (
     <main className="min-h-screen p-4 md:p-8">
       {/* Logo */}
@@ -16,16 +19,16 @@ export default function Proyectos() {
       
       <div className="max-w-6xl mx-auto pt-20">
         <h1 className="text-4xl md:text-5xl font-bold mb-12 text-center">
-          Mis <span className="text-primary">Proyectos</span>
+          {t('projects.title')}
         </h1>
         
         <div className="grid md:grid-cols-3 gap-8">
           {/* Proyecto 1 */}
           <div className="card flex flex-col">
             <div className="h-48 bg-secondary rounded-lg mb-4"></div>
-            <h3 className="text-xl font-semibold mb-2">Proyecto 1</h3>
+            <h3 className="text-xl font-semibold mb-2">{t('projects.card.title1')}</h3>
             <p className="text-sm mb-4 flex-grow">
-              Aquí una descripción breve sobre mi proyecto junto a sus tecnologías usadas
+              {t('projects.card.desc')}
             </p>
             <a 
               href="https://github.com" 
@@ -37,16 +40,16 @@ export default function Proyectos() {
                 <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
               </svg>
-              Ver en la web
+              {t('projects.view_web')}
             </a>
           </div>
           
           {/* Proyecto 2 */}
           <div className="card flex flex-col">
             <div className="h-48 bg-secondary rounded-lg mb-4"></div>
-            <h3 className="text-xl font-semibold mb-2">Proyecto 2</h3>
+            <h3 className="text-xl font-semibold mb-2">{t('projects.card.title2')}</h3>
             <p className="text-sm mb-4 flex-grow">
-              Aquí una descripción breve sobre mi proyecto junto a sus tecnologías usadas
+              {t('projects.card.desc')}
             </p>
             <a 
               href="https://github.com" 
@@ -58,16 +61,16 @@ export default function Proyectos() {
                 <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
               </svg>
-              Ver en la web
+              {t('projects.view_web')}
             </a>
           </div>
           
           {/* Proyecto 3 */}
           <div className="card flex flex-col">
             <div className="h-48 bg-secondary rounded-lg mb-4"></div>
-            <h3 className="text-xl font-semibold mb-2">Proyecto 3</h3>
+            <h3 className="text-xl font-semibold mb-2">{t('projects.card.title3')}</h3>
             <p className="text-sm mb-4 flex-grow">
-              Aquí una descripción breve sobre mi proyecto junto a sus tecnologías usadas
+              {t('projects.card.desc')}
             </p>
             <a 
               href="https://github.com" 
@@ -79,7 +82,7 @@ export default function Proyectos() {
                 <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
               </svg>
-              Ver en la web
+              {t('projects.view_web')}
             </a>
           </div>
         </div>

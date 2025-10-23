@@ -1,8 +1,11 @@
+'use client';
 import LanguageSelector from '@/components/LanguageSelector';
 import Link from 'next/link';
 // Removed unused Image import
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function SobreMi() {
+  const { t } = useLanguage();
   return (
     <main className="min-h-screen p-4 md:p-8">
       {/* Logo */}
@@ -17,7 +20,7 @@ export default function SobreMi() {
       
       <div className="max-w-5xl mx-auto pt-20">
         <h1 className="text-4xl md:text-5xl font-bold mb-12 text-center">
-          Hola, mi nombre es <span className="text-primary">Saray Noguera</span>
+          {t('about.title')}
         </h1>
         
         <div className="grid md:grid-cols-[280px_1fr] gap-6 md:gap-8 card p-6 md:p-8">
@@ -34,24 +37,18 @@ export default function SobreMi() {
           </div>
           
           <div>
-            <p className="text-base md:text-lg mb-6">
-               Soy estudiante universitaria de Ingeniería de software. Me interesa mucho el desarrollo de proyectos tecnológicos, la programación y aprender nuevas herramientas digitales.
-             </p>
-            <p className="text-base md:text-lg mb-6">
-               En mi tiempo libre disfruto de la música, la lectura, los viajes y compartir con mis amigos y familia.
-             </p>
-            <button className="btn">
-              Conocerme un poco más
-            </button>
+            <p className="text-base md:text-lg mb-6">{t('about.intro1')}</p>
+            <p className="text-base md:text-lg mb-6">{t('about.intro2')}</p>
+            <button className="btn">{t('about.btn.more')}</button>
           </div>
         </div>
         
         <div className="mt-12 grid md:grid-cols-2 gap-6 md:gap-8">
           <div className="card">
-            <h2 className="text-2xl font-semibold text-primary mb-4">Mis Habilidades</h2>
+            <h2 className="text-2xl font-semibold text-primary mb-4">{t('about.skills.title')}</h2>
             <div className="grid grid-cols-1 gap-4">
               <div>
-                <h3 className="text-xl font-medium mb-2">Backend</h3>
+                <h3 className="text-xl font-medium mb-2">{t('about.skills.backend')}</h3>
                 <ul className="list-disc list-inside space-y-2">
                   <li>Node.js</li>
                   <li>Express</li>
@@ -62,7 +59,7 @@ export default function SobreMi() {
               </div>
               
               <div>
-                <h3 className="text-xl font-medium mb-2">Frontend</h3>
+                <h3 className="text-xl font-medium mb-2">{t('about.skills.frontend')}</h3>
                 <ul className="list-disc list-inside space-y-2">
                   <li>React</li>
                   <li>Next.js</li>
@@ -75,21 +72,21 @@ export default function SobreMi() {
           </div>
           
           <div className="card">
-            <h2 className="text-2xl font-semibold text-primary mb-4">Información Personal</h2>
+            <h2 className="text-2xl font-semibold text-primary mb-4">{t('about.info.title')}</h2>
             <div className="space-y-4">
               <div>
-                <h3 className="text-xl font-medium mb-2">Gustos</h3>
-                <p>Desarrollo web, inteligencia artificial, diseño UX/UI, tecnologías emergentes</p>
+                <h3 className="text-xl font-medium mb-2">{t('about.info.likes')}</h3>
+                <p>{t('about.info.likes.text')}</p>
               </div>
               
               <div>
-                <h3 className="text-xl font-medium mb-2">Pasatiempos</h3>
-                <p>Leer libros de ciencia ficción, escuchar música, viajar, fotografía</p>
+                <h3 className="text-xl font-medium mb-2">{t('about.info.hobbies')}</h3>
+                <p>{t('about.info.hobbies.text')}</p>
               </div>
               
               <div>
-                <h3 className="text-xl font-medium mb-2">Metas</h3>
-                <p>Convertirme en desarrolladora full-stack, contribuir a proyectos open source, aprender nuevas tecnologías</p>
+                <h3 className="text-xl font-medium mb-2">{t('about.info.goals')}</h3>
+                <p>{t('about.info.goals.text')}</p>
               </div>
             </div>
           </div>

@@ -1,9 +1,11 @@
 'use client';
 
 import { useTheme } from '@/context/ThemeContext';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function ThemeToggle() {
   const { theme, toggleTheme } = useTheme();
+  const { t } = useLanguage();
 
   const handleToggle = () => {
     toggleTheme();
@@ -15,7 +17,7 @@ export default function ThemeToggle() {
         id="toggle-theme"
         onClick={handleToggle}
         className="flex items-center justify-center h-9 md:h-10 w-9 md:w-10 rounded-full bg-white/90 dark:bg-gray-800/90 shadow-sm hover:shadow-md transition-colors border border-gray-200 dark:border-gray-700 text-gray-800 dark:text-gray-100"
-        aria-label={theme === 'light' ? 'Activar modo oscuro' : 'Activar modo claro'}
+        aria-label={theme === 'light' ? t('theme.toggle.to_dark') : t('theme.toggle.to_light')}
       >
         {theme === 'light' ? (
           <svg

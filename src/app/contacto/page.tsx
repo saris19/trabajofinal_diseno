@@ -1,8 +1,11 @@
+'use client';
 import LanguageSelector from '@/components/LanguageSelector';
 import Link from 'next/link';
 import SocialLinks from '@/components/SocialLinks';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function Contacto() {
+  const { t } = useLanguage();
   return (
     <main className="min-h-screen p-4 md:p-8">
       {/* Logo */}
@@ -17,10 +20,10 @@ export default function Contacto() {
       
       <div className="max-w-4xl mx-auto pt-20">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">
-          Hablemos de tu próximo proyecto?
+          {t('contact.title')}
         </h1>
         <h2 className="text-2xl md:text-3xl font-semibold mb-12 text-center text-primary">
-          contáctame
+          {t('contact.subtitle')}
         </h2>
         
         <div className="grid md:grid-cols-2 gap-8">
@@ -33,8 +36,8 @@ export default function Contacto() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-sm font-medium uppercase">CORREO</h3>
-                <p className="text-sm">saraynoguera21@gmail.com</p>
+                <h3 className="text-sm font-medium uppercase">{t('contact.email.label')}</h3>
+                <p className="text-sm">{t('contact.email.value')}</p>
               </div>
             </div>
           </div>
@@ -48,48 +51,48 @@ export default function Contacto() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-sm font-medium uppercase">DISPONIBILIDAD</h3>
-                <p className="text-sm">Respondo en 24 - 48 horas</p>
+                <h3 className="text-sm font-medium uppercase">{t('contact.availability.label')}</h3>
+                <p className="text-sm">{t('contact.availability.value')}</p>
               </div>
             </div>
           </div>
         </div>
         
         <div className="card mt-8">
-          <h3 className="text-xl font-semibold mb-4">Envíame un mensaje</h3>
+          <h3 className="text-xl font-semibold mb-4">{t('contact.form.title')}</h3>
           <form className="space-y-4">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium mb-1">Nombre</label>
+              <label htmlFor="name" className="block text-sm font-medium mb-1">{t('contact.form.name')}</label>
               <input 
                 type="text" 
                 id="name" 
                 className="w-full p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50"
-                placeholder="Tu nombre"
+                placeholder={t('contact.form.placeholder.name')}
               />
             </div>
             
             <div>
-              <label htmlFor="email" className="block text-sm font-medium mb-1">Correo electrónico</label>
+              <label htmlFor="email" className="block text-sm font-medium mb-1">{t('contact.form.email')}</label>
               <input 
                 type="email" 
                 id="email" 
                 className="w-full p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50"
-                placeholder="tu@email.com"
+                placeholder={t('contact.form.placeholder.email')}
               />
             </div>
             
             <div>
-              <label htmlFor="message" className="block text-sm font-medium mb-1">Mensaje</label>
+              <label htmlFor="message" className="block text-sm font-medium mb-1">{t('contact.form.message')}</label>
               <textarea 
                 id="message" 
                 rows={4} 
                 className="w-full p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50"
-                placeholder="Cuéntame sobre tu proyecto..."
+                placeholder={t('contact.form.placeholder.message')}
               ></textarea>
             </div>
             
             <button type="submit" className="btn w-full justify-center">
-              Interactúa conmigo, desde ya!
+              {t('contact.form.submit')}
             </button>
           </form>
         </div>
