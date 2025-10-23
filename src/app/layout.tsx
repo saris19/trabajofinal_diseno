@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import { ThemeProvider } from "@/context/ThemeContext";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
@@ -24,10 +25,12 @@ export default function RootLayout({
     <html lang="es">
       <body className={`${poppins.className} antialiased transition-colors duration-300 bg-white dark:bg-gray-900 text-gray-900 dark:text-white`}>
         <ThemeProvider>
-          <Header />
-          <div className="pt-20">
-            {children}
-          </div>
+          <LanguageProvider>
+            <Header />
+            <div className="pt-28 md:pt-20">
+              {children}
+            </div>
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>
