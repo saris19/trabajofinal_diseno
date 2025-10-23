@@ -10,6 +10,7 @@ import { useLanguage } from '@/context/LanguageContext';
 export default function Header() {
   const pathname = usePathname();
   const [animateBlob, setAnimateBlob] = useState(false);
+  const { t } = useLanguage();
   
   const isActive = (path: string) => {
     return pathname === path;
@@ -54,7 +55,7 @@ export default function Header() {
                     isActive('/') ? 'bg-primary text-white' : 'hover:bg-primary/10'
                   }`}
                 >
-                  <span>Inicio</span>
+                  <span>{t('nav.home')}</span>
                 </Link>
               </li>
               <li>
@@ -64,7 +65,7 @@ export default function Header() {
                     isActive('/sobre-mi') ? 'bg-primary text-white' : 'hover:bg-primary/10'
                   }`}
                 >
-                  <span>Sobre mí</span>
+                  <span>{t('nav.about')}</span>
                 </Link>
               </li>
               <li>
@@ -74,7 +75,7 @@ export default function Header() {
                     isActive('/proyectos') ? 'bg-primary text-white' : 'hover:bg-primary/10'
                   }`}
                 >
-                  <span>Proyectos</span>
+                  <span>{t('nav.projects')}</span>
                 </Link>
               </li>
               <li>
@@ -84,7 +85,7 @@ export default function Header() {
                     isActive('/resenas') ? 'bg-primary text-white' : 'hover:bg-primary/10'
                   }`}
                 >
-                  <span>Reseñas</span>
+                  <span>{t('nav.reviews')}</span>
                 </Link>
               </li>
               <li>
@@ -94,7 +95,7 @@ export default function Header() {
                     isActive('/contacto') ? 'bg-primary text-white' : 'hover:bg-primary/10'
                   }`}
                 >
-                  <span>Contacto</span>
+                  <span>{t('nav.contact')}</span>
                 </Link>
               </li>
             </ul>
@@ -140,7 +141,7 @@ export default function Header() {
                     isActive('/') ? 'bg-primary text-white' : 'hover:bg-primary/10'
                   }`}
                 >
-                  <span>Inicio</span>
+                  <span>{t('nav.home')}</span>
                 </Link>
               </li>
               <li>
@@ -150,7 +151,7 @@ export default function Header() {
                     isActive('/sobre-mi') ? 'bg-primary text-white' : 'hover:bg-primary/10'
                   }`}
                 >
-                  <span>Sobre mí</span>
+                  <span>{t('nav.about')}</span>
                 </Link>
               </li>
               <li>
@@ -160,7 +161,7 @@ export default function Header() {
                     isActive('/proyectos') ? 'bg-primary text-white' : 'hover:bg-primary/10'
                   }`}
                 >
-                  <span>Proyectos</span>
+                  <span>{t('nav.projects')}</span>
                 </Link>
               </li>
               <li>
@@ -170,7 +171,7 @@ export default function Header() {
                     isActive('/resenas') ? 'bg-primary text-white' : 'hover:bg-primary/10'
                   }`}
                 >
-                  <span>Reseñas</span>
+                  <span>{t('nav.reviews')}</span>
                 </Link>
               </li>
               <li>
@@ -180,7 +181,7 @@ export default function Header() {
                     isActive('/contacto') ? 'bg-primary text-white' : 'hover:bg-primary/10'
                   }`}
                 >
-                  <span>Contacto</span>
+                  <span>{t('nav.contact')}</span>
                 </Link>
               </li>
             </ul>

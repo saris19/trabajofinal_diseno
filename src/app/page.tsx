@@ -4,9 +4,11 @@ import Link from 'next/link';
 // Removed unused Image import
 import SocialLinks from '@/components/SocialLinks';
 import { useEffect, useState } from 'react';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function Home() {
   const [animatePurpleBlob, setAnimatePurpleBlob] = useState(false);
+  const { t } = useLanguage();
   
   useEffect(() => {
     // Escuchar el evento personalizado desde el Header
@@ -59,14 +61,14 @@ export default function Home() {
         </div>
         
         <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">
-          Hola, soy Saray Noguera
+          {t('home.title')}
           <br />
-          <span className="text-primary animate-text-gradient bg-gradient-to-r from-primary via-purple-500 to-primary bg-clip-text text-transparent bg-300% animate-gradient">Ingeniera de Software</span>
+          <span className="text-primary animate-text-gradient bg-gradient-to-r from-primary via-purple-500 to-primary bg-clip-text text-transparent bg-300% animate-gradient">{t('home.subtitle')}</span>
         </h1>
         
         <div className="flex flex-col sm:flex-row gap-4 mt-8 animate-fade-in">
           <Link href="/contacto" className="btn group transition-all duration-300 transform hover:scale-105">
-            Contáctame
+            {t('cta.contact')}
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform duration-300 group-hover:translate-x-1">
               <path d="M5 12h14" />
               <path d="m12 5 7 7-7 7" />
@@ -74,7 +76,7 @@ export default function Home() {
           </Link>
           
           <Link href="/proyectos" className="btn group transition-all duration-300 transform hover:scale-105">
-            Ver mis Proyectos
+            {t('cta.projects')}
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform duration-300 group-hover:translate-x-1">
               <path d="M5 12h14" />
               <path d="m12 5 7 7-7 7" />
@@ -85,7 +87,7 @@ export default function Home() {
       
       {/* Connect with me section */}
       <section className="mt-16 mb-8">
-        <h2 className="text-xl font-medium mb-4">Conecta conmigo</h2>
+        <h2 className="text-xl font-medium mb-4">{t('home.connect')}</h2>
         <SocialLinks />
       </section>
     </main>
