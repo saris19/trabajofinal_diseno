@@ -45,11 +45,11 @@ export default function Home() {
           {/* Partículas brillantes cuando se activa */}
           {animatePurpleBlob && (
             <>
-              <div className="absolute top-10 left-20 w-2 h-2 bg-white rounded-full animate-particle-1"></div>
-              <div className="absolute top-30 left-40 w-3 h-3 bg-white rounded-full animate-particle-2"></div>
-              <div className="absolute top-50 left-10 w-1 h-1 bg-white rounded-full animate-particle-3"></div>
-              <div className="absolute top-20 left-60 w-2 h-2 bg-white rounded-full animate-particle-4"></div>
-              <div className="absolute top-40 left-30 w-1 h-1 bg-white rounded-full animate-particle-5"></div>
+              <div className="absolute top-10 left-20 w-2 h-2 bg-white dark:bg-gray-300 rounded-full animate-particle-1"></div>
+              <div className="absolute top-30 left-40 w-3 h-3 bg-white dark:bg-gray-300 rounded-full animate-particle-2"></div>
+              <div className="absolute top-50 left-10 w-1 h-1 bg-white dark:bg-gray-300 rounded-full animate-particle-3"></div>
+              <div className="absolute top-20 left-60 w-2 h-2 bg-white dark:bg-gray-300 rounded-full animate-particle-4"></div>
+              <div className="absolute top-40 left-30 w-1 h-1 bg-white dark:bg-gray-300 rounded-full animate-particle-5"></div>
             </>
           )}
           

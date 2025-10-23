@@ -46,8 +46,7 @@ export default function SobreMi() {
           </div>
         </div>
         
--        <div className="mt-12 grid md:grid-cols-2 gap-8">
-+        <div className="mt-12 grid md:grid-cols-2 gap-6 md:gap-8">
+        <div className="mt-12 grid md:grid-cols-2 gap-6 md:gap-8">
           <div className="card">
             <h2 className="text-2xl font-semibold text-primary mb-4">Mis Habilidades</h2>
             <div className="grid grid-cols-1 gap-4">

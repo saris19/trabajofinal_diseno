@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import LanguageSelector from './LanguageSelector';
 import ThemeToggle from './ThemeToggle';
@@ -11,6 +11,10 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [animateBlob, setAnimateBlob] = useState(false);
   
+  // Cerrar el menú móvil automáticamente al cambiar de ruta
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
   const isActive = (path: string) => {
     return pathname === path;
   };
@@ -34,16 +38,19 @@ export default function Header() {
       <div className="max-w-7xl mx-auto">
         {/* Desktop Layout - Centrado */}
         <div className="hidden md:flex items-center justify-between gap-x-6">
-          {/* Logo */}
-          <button 
-            onClick={triggerBlobAnimation} 
-            className="flex items-center focus:outline-none"
-            aria-label="Animar fondo"
-          >
-            <div className={`w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center ${animateBlob ? 'animate-spin-slow' : 'animate-pulse hover:animate-none'} transition-all`}>
-              <span className="text-primary font-bold text-lg">SN</span>
-            </div>
-          </button>
+          {/* Logo y Theme Toggle */}
+          <div className="flex items-center gap-3">
+            <button 
+              onClick={triggerBlobAnimation} 
+              className="flex items-center focus:outline-none"
+              aria-label="Animar fondo"
+            >
+              <div className={`w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center ${animateBlob ? 'animate-spin-slow' : 'animate-pulse hover:animate-none'} transition-all`}>
+                <span className="text-primary font-bold text-lg">SN</span>
+              </div>
+            </button>
+            <ThemeToggle />
+          </div>
 
           {/* Navigation */}
           <nav className="flex-1 flex justify-center">
@@ -101,9 +108,8 @@ export default function Header() {
             </ul>
           </nav>
 
-          {/* Theme Toggle y Language Selector */}
+          {/* Language Selector */}
           <div className="flex items-center gap-3 flex-shrink-0">
-            <ThemeToggle />
             <LanguageSelector />
           </div>
         </div>
