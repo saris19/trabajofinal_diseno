@@ -47,12 +47,22 @@ export default function SobreMi() {
           <div>
             <p className="text-base md:text-lg mb-6">{t('about.intro1')}</p>
             <p className="text-base md:text-lg mb-6">{t('about.intro2')}</p>
-            <button 
-              onClick={() => setIsModalOpen(true)}
-              className="btn group transition-all duration-300 transform hover:scale-105"
-            >
-              {t('about.btn.more')}
-            </button>
+            <div className="flex flex-wrap gap-3">
+              <button 
+                onClick={() => setIsModalOpen(true)}
+                className="btn group transition-all duration-300 transform hover:scale-105"
+              >
+                {t('about.btn.more')}
+              </button>
+              <Link
+                href="https://drive.google.com/file/d/1a6iD8T3uDiUW9v9oDR2mkaEi86q3cTRp/view?usp=share_link"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn group transition-all duration-300 transform hover:scale-105"
+              >
+                {t('about.btn.download_cv')}
+              </Link>
+            </div>
           </div>
         </div>
         
