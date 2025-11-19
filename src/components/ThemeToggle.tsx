@@ -10,6 +10,11 @@ export default function ThemeToggle() {
 
   const handleToggle = () => {
     toggleTheme();
+    // Guardar preferencia del usuario explícitamente al alternar
+    if (typeof window !== 'undefined') {
+      const newPref = theme === 'light' ? 'dark' : 'light';
+      localStorage.setItem('theme', newPref);
+    }
   };
 
   return (

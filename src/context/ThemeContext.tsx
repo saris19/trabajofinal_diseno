@@ -50,8 +50,8 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
       
       setTheme(systemTheme);
       applyTheme(systemTheme);
-      localStorage.setItem('theme', systemTheme);
       
+      // NO guardar en localStorage aquí para que siga la preferencia del sistema
       // Escuchar cambios en las preferencias del sistema
       const handleChange = (e: MediaQueryListEvent) => {
         const newSystemTheme = e.matches ? 'dark' : 'light';
