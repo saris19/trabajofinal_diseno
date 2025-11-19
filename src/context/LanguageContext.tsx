@@ -31,7 +31,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'about.title': 'Hola, mi nombre es Saray Noguera',
     'about.intro1': 'Soy estudiante universitaria de Ingeniería de software. Me interesa mucho el desarrollo de proyectos tecnológicos, la programación y aprender nuevas herramientas digitales.',
     'about.intro2': 'En mi tiempo libre disfruto de la música, la lectura, los viajes y compartir con mis amigos y familia.',
-    'about.btn.more': 'Un poco mas sobre mi',
+    'about.btn.more': 'Un poco más sobre mí',
     'about.skills.title': 'Mis Habilidades',
     'about.skills.backend': 'Backend',
     'about.skills.frontend': 'Frontend',
