@@ -81,8 +81,9 @@ export default function Contacto() {
               setName('');
               setEmail('');
               setMessage('');
-            } catch (err: any) {
-              setError(err.message || 'No se pudo enviar el mensaje.');
+            } catch (err) {
+              const msg = err instanceof Error ? err.message : 'No se pudo enviar el mensaje.';
+              setError(msg);
             } finally {
               setLoading(false);
             }

@@ -17,7 +17,7 @@ export default function Proyectos() {
       try {
         const res = await fetch(pngPath, { method: 'HEAD' });
         if (res.ok) setter(pngPath);
-      } catch (_) {
+      } catch {
         // ignore
       }
     };
