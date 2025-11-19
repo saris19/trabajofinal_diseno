@@ -5,6 +5,7 @@ import Link from 'next/link';
 import SocialLinks from '@/components/SocialLinks';
 import { useEffect, useState } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
+import { ArrowRight } from 'lucide-react';
 
 export default function Home() {
   const [animatePurpleBlob, setAnimatePurpleBlob] = useState(false);
@@ -69,27 +70,22 @@ export default function Home() {
         <div className="flex flex-col sm:flex-row gap-4 mt-8 animate-fade-in">
           <Link href="/contacto" className="btn group transition-all duration-300 transform hover:scale-105">
             {t('cta.contact')}
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform duration-300 group-hover:translate-x-1">
-              <path d="M5 12h14" />
-              <path d="m12 5 7 7-7 7" />
-            </svg>
+            <ArrowRight size={20} className="transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
           
           <Link href="/proyectos" className="btn group transition-all duration-300 transform hover:scale-105">
             {t('cta.projects')}
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform duration-300 group-hover:translate-x-1">
-              <path d="M5 12h14" />
-              <path d="m12 5 7 7-7 7" />
-            </svg>
+            <ArrowRight size={20} className="transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
+        </div>
+        {/* Conecta conmigo justo debajo de los botones */}
+        <div className="mt-6 animate-fade-in">
+          <h2 className="text-xl font-medium mb-4">{t('home.connect')}</h2>
+          <SocialLinks />
         </div>
       </section>
       
-      {/* Connect with me section */}
-      <section className="mt-16 mb-8">
-        <h2 className="text-xl font-medium mb-4">{t('home.connect')}</h2>
-        <SocialLinks />
-      </section>
+      
     </main>
   );
 }

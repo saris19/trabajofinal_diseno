@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import { X } from 'lucide-react';
 
 interface ModalProps {
   isOpen: boolean;
@@ -48,14 +49,12 @@ export default function Modal({ isOpen, onClose, title, children }: ModalProps) 
             {title}
           </h2>
           <button
+            type="button"
             onClick={onClose}
-            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-            aria-label="Cerrar modal"
+            aria-label="Cerrar"
+            className="rounded-full p-2 hover:bg-gray-100 dark:hover:bg-gray-800"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-500 dark:text-gray-400">
-              <path d="M18 6L6 18" />
-              <path d="M6 6l12 12" />
-            </svg>
+            <X size={20} className="text-gray-500 dark:text-gray-400" />
           </button>
         </div>
         

@@ -4,10 +4,12 @@ import LanguageSelector from '@/components/LanguageSelector';
 import Link from 'next/link';
 import Modal from '@/components/Modal';
 import { useLanguage } from '@/context/LanguageContext';
+import Image from 'next/image';
 
 export default function SobreMi() {
   const { t } = useLanguage();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [photoSrc, setPhotoSrc] = useState('/profile.png');
   return (
     <main className="min-h-screen p-4 md:p-8">
       {/* Logo */}
@@ -25,16 +27,18 @@ export default function SobreMi() {
           {t('about.title')}
         </h1>
         
-        <div className="grid md:grid-cols-[280px_1fr] gap-6 md:gap-8 card p-6 md:p-8">
+        <div className="grid md:grid-cols-[280px_1fr] gap-6 md:gap-8 card">
           <div className="flex justify-center">
-            <div className="w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden bg-secondary">
-              {/* Placeholder para la imagen de perfil */}
-              <div className="w-full h-full flex items-center justify-center text-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-              </div>
+            <div className="relative w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden bg-secondary">
+              <Image
+                src={photoSrc}
+                alt="Foto de perfil"
+                fill
+                sizes="(max-width: 768px) 224px, 256px"
+                className="object-cover"
+                priority
+                onError={() => setPhotoSrc('/profile.svg')}
+              />
             </div>
           </div>
           
@@ -46,57 +50,64 @@ export default function SobreMi() {
               className="btn group transition-all duration-300 transform hover:scale-105"
             >
               {t('about.btn.more')}
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform duration-300 group-hover:translate-x-1">
-                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-              </svg>
             </button>
           </div>
         </div>
         
-        <div className="mt-12 grid md:grid-cols-2 gap-6 md:gap-8">
+        <div className="mt-12 grid grid-cols-1 gap-6 md:gap-8">
           <div className="card">
             <h2 className="text-2xl font-semibold text-primary mb-4">{t('about.skills.title')}</h2>
             <div className="grid grid-cols-1 gap-4">
               <div>
                 <h3 className="text-xl font-medium mb-2">{t('about.skills.backend')}</h3>
-                <ul className="list-disc list-inside space-y-2">
-                  <li>Node.js</li>
-                  <li>Express</li>
-                  <li>MongoDB</li>
-                  <li>SQL</li>
-                  <li>API REST</li>
+                <ul className="space-y-2">
+                   <li className="flex items-center gap-2">
+                     <span className="inline-block w-2 h-2 rounded-full bg-green-500"></span>
+                     Node.js
+                   </li>
+                   <li className="flex items-center gap-2">
+                     <span className="inline-block w-2 h-2 rounded-full bg-gray-500"></span>
+                     Express
+                   </li>
+                   <li className="flex items-center gap-2">
+                     <span className="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+                     MongoDB
+                   </li>
+                   <li className="flex items-center gap-2">
+                     <span className="inline-block w-2 h-2 rounded-full bg-blue-500"></span>
+                     SQL
+                   </li>
+                   <li className="flex items-center gap-2">
+                     <span className="inline-block w-2 h-2 rounded-full bg-orange-500"></span>
+                     API REST
+                   </li>
                 </ul>
               </div>
               
               <div>
                 <h3 className="text-xl font-medium mb-2">{t('about.skills.frontend')}</h3>
-                <ul className="list-disc list-inside space-y-2">
-                  <li>React</li>
-                  <li>Next.js</li>
-                  <li>HTML/CSS</li>
-                  <li>JavaScript/TypeScript</li>
-                  <li>Tailwind CSS</li>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2">
+                    <span className="inline-block w-2 h-2 rounded-full bg-cyan-500"></span>
+                    React
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="inline-block w-2 h-2 rounded-full bg-neutral-900 dark:bg-white"></span>
+                    Next.js
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="inline-block w-2 h-2 rounded-full bg-orange-600"></span>
+                    HTML/CSS
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="inline-block w-2 h-2 rounded-full bg-yellow-500"></span>
+                    JavaScript/TypeScript
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="inline-block w-2 h-2 rounded-full bg-teal-500"></span>
+                    Tailwind CSS
+                  </li>
                 </ul>
-              </div>
-            </div>
-          </div>
-          
-          <div className="card">
-            <h2 className="text-2xl font-semibold text-primary mb-4">{t('about.info.title')}</h2>
-            <div className="space-y-4">
-              <div>
-                <h3 className="text-xl font-medium mb-2">{t('about.info.likes')}</h3>
-                <p>{t('about.info.likes.text')}</p>
-              </div>
-              
-              <div>
-                <h3 className="text-xl font-medium mb-2">{t('about.info.hobbies')}</h3>
-                <p>{t('about.info.hobbies.text')}</p>
-              </div>
-              
-              <div>
-                <h3 className="text-xl font-medium mb-2">{t('about.info.goals')}</h3>
-                <p>{t('about.info.goals.text')}</p>
               </div>
             </div>
           </div>

@@ -44,9 +44,12 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'about.info.goals.text': 'Convertirme en desarrolladora full-stack, contribuir a proyectos open source, aprender nuevas tecnologías',
     // Projects page
     'projects.title': 'Mis Proyectos',
-    'projects.card.title1': 'Proyecto 1',
-    'projects.card.title2': 'Proyecto 2',
-    'projects.card.title3': 'Proyecto 3',
+    'projects.card.title1': 'Mapas y Rutas',
+    'projects.card.desc1': 'Aplicación de mapas interactivos con rutas guiadas, geolocalización y puntos de interés',
+    'projects.card.title2': 'Pasaporte Digital / QR',
+    'projects.card.desc2': 'Generación y lectura de códigos QR con visualización de datos y comprobantes',
+    'projects.card.title3': 'Dashboard UI',
+    'projects.card.desc3': 'Interfaz moderna tipo panel con tarjetas, navegación y componentes reutilizables',
     'projects.card.desc': 'Aquí una descripción breve sobre mi proyecto junto a sus tecnologías usadas',
     'projects.view_web': 'Ver en la web',
     // Reviews page
@@ -111,9 +114,12 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'about.info.goals.text': 'Become a full‑stack developer, contribute to open source projects, learn new technologies',
     // Projects page
     'projects.title': 'My Projects',
-    'projects.card.title1': 'Project 1',
-    'projects.card.title2': 'Project 2',
-    'projects.card.title3': 'Project 3',
+    'projects.card.title1': 'Maps & Routes',
+    'projects.card.desc1': 'Interactive maps app with guided routes, geolocation and points of interest',
+    'projects.card.title2': 'Digital Passport / QR',
+    'projects.card.desc2': 'QR code generation and scanning with data visualization and receipts',
+    'projects.card.title3': 'Dashboard UI',
+    'projects.card.desc3': 'Modern panel-style interface with cards, navigation and reusable components',
     'projects.card.desc': 'A brief description of my project along with the technologies used',
     'projects.view_web': 'View on the web',
     // Reviews page
@@ -178,9 +184,12 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'about.info.goals.text': "Devenir développeuse full‑stack, contribuer à des projets open source, apprendre de nouvelles technologies",
     // Projects page
     'projects.title': 'Mes Projets',
-    'projects.card.title1': 'Projet 1',
-    'projects.card.title2': 'Projet 2',
-    'projects.card.title3': 'Projet 3',
+    'projects.card.title1': 'Cartes et Itinéraires',
+    "projects.card.desc1": "Application de cartes interactives avec itinéraires guidés, géolocalisation et points d'intérêt",
+    'projects.card.title2': 'Passeport Numérique / QR',
+    'projects.card.desc2': 'Génération et lecture de QR codes avec visualisation des données et justificatifs',
+    'projects.card.title3': 'Dashboard UI',
+    'projects.card.desc3': 'Interface moderne de type panneau avec cartes, navigation et composants réutilisables',
     'projects.card.desc': 'Brève description de mon projet avec les technologies utilisées',
     'projects.view_web': 'Voir sur le web',
     // Reviews page
