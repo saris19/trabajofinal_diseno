@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-// Removed unused Image import
+
 import SocialLinks from '@/components/SocialLinks';
 import { useEffect, useState } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
@@ -12,7 +12,7 @@ export default function Home() {
   const { t } = useLanguage();
   
   useEffect(() => {
-    // Escuchar el evento personalizado desde el Header
+    
     const handleBlobAnimation = () => {
       setAnimatePurpleBlob(true);
       setTimeout(() => setAnimatePurpleBlob(false), 2000);
@@ -20,7 +20,7 @@ export default function Home() {
     
     window.addEventListener('animateBlob', handleBlobAnimation);
     
-    // Limpiar el event listener cuando el componente se desmonte
+    
     return () => {
       window.removeEventListener('animateBlob', handleBlobAnimation);
     };
@@ -29,14 +29,14 @@ export default function Home() {
   return (
     <main className="min-h-screen p-4 md:p-8">
       
-      {/* Hero Section */}
+      
       <section className="flex flex-col items-center justify-center min-h-[80vh] text-center relative overflow-hidden px-4 sm:px-6 lg:px-8">
-        {/* Fondo animado */}
+        
         <div className="absolute inset-0 -z-10">
-          {/* Espiral morada principal */}
+          
           <div className={`absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full mix-blend-multiply filter blur-xl opacity-70 ${animatePurpleBlob ? 'animate-spiral' : 'animate-blob'}`}></div>
           
-          {/* Efecto de ondas cuando se activa */}
+          
           {animatePurpleBlob && (
             <>
               <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full mix-blend-multiply filter blur-xl animate-ripple"></div>
@@ -45,7 +45,7 @@ export default function Home() {
             </>
           )}
           
-          {/* Partículas brillantes cuando se activa */}
+          
           {animatePurpleBlob && (
             <>
               <div className="absolute top-10 left-20 w-2 h-2 bg-white dark:bg-gray-300 rounded-full animate-particle-1"></div>
@@ -56,7 +56,7 @@ export default function Home() {
             </>
           )}
           
-          {/* Otras burbujas de fondo */}
+          
           <div className="absolute top-40 right-10 w-72 h-72 bg-blue-300/20 dark:bg-blue-700/20 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
           <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 w-72 h-72 bg-yellow-300/20 dark:bg-yellow-700/20 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
         </div>
@@ -78,7 +78,7 @@ export default function Home() {
             <ArrowRight size={20} className="transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         </div>
-        {/* Conecta conmigo justo debajo de los botones */}
+        
         <div className="mt-6 animate-fade-in">
           <h2 className="text-xl font-medium mb-4">{t('home.connect')}</h2>
           <SocialLinks />

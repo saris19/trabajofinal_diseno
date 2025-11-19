@@ -18,10 +18,10 @@ export default function Header() {
   
   const triggerBlobAnimation = () => {
     setAnimateBlob(true);
-    // Reiniciar la animación después de 2 segundos
+    
     setTimeout(() => setAnimateBlob(false), 2000);
     
-    // Emitir un evento personalizado para que la página principal pueda escucharlo
+    
     const event = new CustomEvent('animateBlob', { detail: { triggered: true } });
     window.dispatchEvent(event);
   };
@@ -29,9 +29,9 @@ export default function Header() {
   return (
     <header className="sticky top-0 md:fixed md:top-0 left-0 right-0 z-50 px-4 py-4 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-sm border-b border-white/20 dark:border-gray-700/50">
       <div className="max-w-7xl mx-auto">
-        {/* Desktop Layout - Centrado */}
+        
         <div className="hidden md:flex items-center justify-between gap-x-6">
-          {/* Logo y Theme Toggle */}
+          
           <div className="flex items-center gap-3">
             <button 
               onClick={triggerBlobAnimation} 
@@ -45,7 +45,7 @@ export default function Header() {
             <ThemeToggle />
           </div>
 
-          {/* Navigation */}
+          
           <nav className="flex-1 flex justify-center">
             <ul className="flex items-center gap-2 flex-wrap justify-center">
               <li>
@@ -101,17 +101,17 @@ export default function Header() {
             </ul>
           </nav>
 
-          {/* Language Selector */}
+          
           <div className="flex items-center gap-3 flex-shrink-0">
             <LanguageSelector />
           </div>
         </div>
 
-        {/* Mobile Layout */}
+        
         <div className="md:hidden">
-          {/* Header superior con logo, theme toggle y language selector */}
+          
           <div className="flex justify-between items-center mb-3">
-            {/* Logo y Theme Toggle */}
+            
             <div className="flex items-center gap-3">
               <button 
                 onClick={triggerBlobAnimation} 
@@ -125,13 +125,13 @@ export default function Header() {
               <ThemeToggle />
             </div>
 
-            {/* Language Selector */}
+            
             <div className="flex items-center">
               <LanguageSelector />
             </div>
           </div>
 
-          {/* Navigation siempre visible */}
+          
           <nav className="w-full overflow-x-auto">
             <ul className="flex items-center gap-2 whitespace-nowrap px-1">
               <li>

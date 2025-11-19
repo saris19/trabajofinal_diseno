@@ -27,7 +27,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'cta.contact': 'Contáctame',
     'cta.projects': 'Ver mis Proyectos',
     'home.connect': 'Conecta conmigo',
-    // About page
+    
     'about.title': 'Hola, mi nombre es Saray Noguera',
     'about.intro1': 'Soy estudiante universitaria de Ingeniería de software. Me interesa mucho el desarrollo de proyectos tecnológicos, la programación y aprender nuevas herramientas digitales.',
     'about.intro2': 'En mi tiempo libre disfruto de la música, la lectura, los viajes y compartir con mis amigos y familia.',
@@ -43,7 +43,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'about.info.hobbies.text': 'Leer libros de ciencia ficción, escuchar música, viajar, fotografía',
     'about.info.goals': 'Metas',
     'about.info.goals.text': 'Convertirme en desarrolladora full-stack, contribuir a proyectos open source, aprender nuevas tecnologías',
-    // Projects page
+    
     'projects.title': 'Mis Proyectos',
     'projects.card.title1': 'Mapas y Rutas',
     'projects.card.desc1': 'Aplicación de mapas interactivos con rutas guiadas, geolocalización y puntos de interés',
@@ -53,7 +53,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'projects.card.desc3': 'Interfaz moderna tipo panel con tarjetas, navegación y componentes reutilizables',
     'projects.card.desc': 'Aquí una descripción breve sobre mi proyecto junto a sus tecnologías usadas',
     'projects.view_web': 'Ver en la web',
-    // Reviews page
+    
     'reviews.title': 'MIS RESEÑAS',
     'reviews.quote1': 'Saray es una desarrolladora excepcional. Su capacidad para resolver problemas y su atención al detalle hacen que sea un placer trabajar con ella.',
     'reviews.quote2': 'Colaborar con Saray fue una experiencia increíble. Su conocimiento técnico y su capacidad para comunicar ideas complejas de manera sencilla son impresionantes.',
@@ -61,7 +61,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'reviews.role1': 'CEO, TechSolutions',
     'reviews.role2': 'Directora de Proyectos, InnovateTech',
     'reviews.role3': 'CTO, DigitalWave',
-    // Contact page
+    
     'contact.title': 'Hablemos de tu próximo proyecto?',
     'contact.subtitle': 'contáctame',
     'contact.email.label': 'CORREO',
@@ -76,7 +76,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'contact.form.placeholder.email': 'Tu correo electrónico',
     'contact.form.placeholder.message': 'Cuéntame sobre tu proyecto...',
     'contact.form.submit': 'Interactúa conmigo, desde ya!',
-    // Header & Theme & Social
+    
     'header.animate_bg': 'Animar fondo',
     'theme.toggle.to_dark': 'Activar modo oscuro',
     'theme.toggle.to_light': 'Activar modo claro',
@@ -98,7 +98,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'cta.contact': 'Contact me',
     'cta.projects': 'View my Projects',
     'home.connect': 'Connect with me',
-    // About page
+    
     'about.title': "Hello, my name is Saray Noguera",
     'about.intro1': 'I am a university student of Software Engineering. I am very interested in technology project development, programming, and learning new digital tools.',
     'about.intro2': 'In my free time I enjoy music, reading, traveling, and spending time with my friends and family.',
@@ -114,7 +114,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'about.info.hobbies.text': 'Reading sci-fi books, listening to music, traveling, photography',
     'about.info.goals': 'Goals',
     'about.info.goals.text': 'Become a full‑stack developer, contribute to open source projects, learn new technologies',
-    // Projects page
+    
     'projects.title': 'My Projects',
     'projects.card.title1': 'Maps & Routes',
     'projects.card.desc1': 'Interactive maps app with guided routes, geolocation and points of interest',
@@ -124,7 +124,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'projects.card.desc3': 'Modern panel-style interface with cards, navigation and reusable components',
     'projects.card.desc': 'A brief description of my project along with the technologies used',
     'projects.view_web': 'View on the web',
-    // Reviews page
+    
     'reviews.title': 'MY REVIEWS',
     'reviews.quote1': 'Saray is an exceptional developer. Her problem-solving ability and attention to detail make it a pleasure to work with her.',
     'reviews.quote2': 'Collaborating with Saray was an incredible experience. Her technical knowledge and ability to communicate complex ideas in a simple way are impressive.',
@@ -132,7 +132,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'reviews.role1': 'CEO, TechSolutions',
     'reviews.role2': 'Project Director, InnovateTech',
     'reviews.role3': 'CTO, DigitalWave',
-    // Contact page
+    
     'contact.title': 'Shall we talk about your next project?',
     'contact.subtitle': 'contact me',
     'contact.email.label': 'EMAIL',
@@ -147,7 +147,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'contact.form.placeholder.email': 'Your email',
     'contact.form.placeholder.message': 'Tell me about your project...',
     'contact.form.submit': 'Get in touch with me, right away!',
-    // Header & Theme & Social
+    
     'header.animate_bg': 'Animate background',
     'theme.toggle.to_dark': 'Enable dark mode',
     'theme.toggle.to_light': 'Enable light mode',
@@ -169,7 +169,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'cta.contact': 'Contactez-moi',
     'cta.projects': 'Voir mes Projets',
     'home.connect': 'Connectez avec moi',
-    // About page
+    
     'about.title': "Bonjour, je m'appelle Saray Noguera",
     'about.intro1': "Je suis étudiante en ingénierie logicielle. Je m'intéresse beaucoup au développement de projets technologiques, à la programmation et à l'apprentissage de nouveaux outils numériques.",
     'about.intro2': 'Pendant mon temps libre, je profite de la musique, de la lecture, des voyages et de passer du temps avec mes amis et ma famille.',
@@ -185,7 +185,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'about.info.hobbies.text': 'Lire des livres de science-fiction, écouter de la musique, voyager, photographie',
     'about.info.goals': 'Objectifs',
     'about.info.goals.text': "Devenir développeuse full‑stack, contribuer à des projets open source, apprendre de nouvelles technologies",
-    // Projects page
+    
     'projects.title': 'Mes Projets',
     'projects.card.title1': 'Cartes et Itinéraires',
     "projects.card.desc1": "Application de cartes interactives avec itinéraires guidés, géolocalisation et points d'intérêt",
@@ -195,7 +195,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'projects.card.desc3': 'Interface moderne de type panneau avec cartes, navigation et composants réutilisables',
     'projects.card.desc': 'Brève description de mon projet avec les technologies utilisées',
     'projects.view_web': 'Voir sur le web',
-    // Reviews page
+    
     'reviews.title': 'MES AVIS',
     'reviews.quote1': "Saray est une développeuse exceptionnelle. Sa capacité à résoudre les problèmes et son attention aux détails rendent la collaboration très agréable.",
     'reviews.quote2': "Collaborer avec Saray a été une expérience incroyable. Ses connaissances techniques et sa capacité à communiquer des idées complexes de manière simple sont impressionnantes.",
@@ -203,7 +203,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'reviews.role1': 'PDG, TechSolutions',
     'reviews.role2': 'Directrice de Projets, InnovateTech',
     'reviews.role3': 'CTO, DigitalWave',
-    // Contact page
+    
     'contact.title': 'On parle de ton prochain projet ?',
     'contact.subtitle': 'contactez-moi',
     'contact.email.label': 'EMAIL',

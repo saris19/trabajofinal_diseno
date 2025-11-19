@@ -12,14 +12,14 @@ export default function Resenas() {
   const [avatar3, setAvatar3] = useState('/review3.png');
   return (
     <main className="min-h-screen p-4 md:p-8">
-      {/* Logo */}
+      
       <Link href="/" className="absolute top-4 left-4">
         <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
           <span className="text-primary font-bold text-xl">SN</span>
         </div>
       </Link>
       
-      {/* Language Selector */}
+      
       <LanguageSelector />
       
       <div className="max-w-6xl mx-auto pt-20">
@@ -28,7 +28,7 @@ export default function Resenas() {
         </h1>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-6 md:gap-8">
-          {/* Reseña 1 */}
+          
           <div className="card h-full">
             <div className="flex justify-center mb-6">
               <div className="w-24 h-24 rounded-full bg-blue-100 overflow-hidden relative">
@@ -52,7 +52,7 @@ export default function Resenas() {
             </div>
           </div>
           
-          {/* Reseña 2 */}
+          
           <div className="card h-full">
             <div className="flex justify-center mb-6">
               <div className="w-24 h-24 rounded-full bg-green-100 overflow-hidden relative">
@@ -75,7 +75,7 @@ export default function Resenas() {
             </div>
           </div>
           
-          {/* Reseña 3 */}
+          
           <div className="card h-full">
             <div className="flex justify-center mb-6">
               <div className="w-24 h-24 rounded-full bg-red-100 overflow-hidden relative">

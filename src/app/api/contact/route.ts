@@ -14,7 +14,7 @@ export async function POST(req: Request) {
 
     const to = 'saraycueltan21@gmail.com';
 
-    // 1) Intentar con Resend si hay API Key
+    
     const RESEND_API_KEY = process.env.RESEND_API_KEY;
     if (RESEND_API_KEY && RESEND_API_KEY.trim().length > 0) {
       const resend = new Resend(RESEND_API_KEY);
@@ -35,7 +35,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ ok: true, id: data?.id, via: 'resend' });
     }
 
-    // 2) Fallback a SMTP/Nodemailer si existen variables SMTP
+    
     const host = process.env.SMTP_HOST;
     const port = parseInt(process.env.SMTP_PORT || '587', 10);
     const user = process.env.SMTP_USER;

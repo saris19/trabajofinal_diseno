@@ -14,14 +14,14 @@ export default function SobreMi() {
   const [photoSrc, setPhotoSrc] = useState('/profile.png');
   return (
     <main className="min-h-screen p-4 md:p-8">
-      {/* Logo */}
+      
       <Link href="/" className="absolute top-4 left-4">
         <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
           <span className="text-primary font-bold text-xl">SN</span>
         </div>
       </Link>
       
-      {/* Language Selector */}
+      
       <LanguageSelector />
       
       <div className="max-w-5xl mx-auto pt-20">
@@ -129,14 +129,14 @@ export default function SobreMi() {
         </div>
       </div>
 
-      {/* Modal con información personal detallada */}
+      
       <Modal 
         isOpen={isModalOpen} 
         onClose={() => setIsModalOpen(false)}
         title={t('about.info.title')}
       >
         <div className="space-y-6">
-          {/* Gustos en comida */}
+          
           <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 p-6 rounded-xl">
             <div className="flex items-center mb-4">
               <div className="w-10 h-10 bg-purple-500 rounded-lg flex items-center justify-center mr-3">
@@ -164,7 +164,7 @@ export default function SobreMi() {
           <div className="bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-blue-900/20 p-6 rounded-xl">
             <div className="flex items-center mb-4">
               <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center mr-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg">
                   <path d="M9 11H5a2 2 0 0 0-2 2v3c0 1.1.9 2 2 2h4m-4-8V9a2 2 0 0 1 2-2h4m-4 8h10a2 2 0 0 0 2-2v-3c0-1.1-.9-2-2-2H9m0 8V9a2 2 0 0 1 2-2h4" />
                 </svg>
               </div>
@@ -173,7 +173,7 @@ export default function SobreMi() {
             <p className="text-gray-700 dark:text-gray-300">{t('about.info.hobbies.text')}</p>
           </div>
 
-          {/* Qué me gusta hacer en mis tiempos libres */}
+          
           <div className="bg-gradient-to-r from-indigo-50 to-blue-50 dark:from-indigo-900/20 dark:to-blue-900/20 p-6 rounded-xl">
             <div className="flex items-center mb-4">
               <div className="w-10 h-10 bg-indigo-500 rounded-lg flex items-center justify-center mr-3">
@@ -188,7 +188,7 @@ export default function SobreMi() {
           <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-6 rounded-xl">
             <div className="flex items-center mb-4">
               <div className="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center mr-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2L2 7l10 5 10-5-10-5z" />
                   <path d="M2 17l10 5 10-5" />
                   <path d="M2 12l10 5 10-5" />
@@ -199,11 +199,11 @@ export default function SobreMi() {
             <p className="text-gray-700 dark:text-gray-300">{t('about.info.goals.text')}</p>
           </div>
 
-          {/* Habilidades técnicas destacadas */}
+          
           <div className="bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-6 rounded-xl">
             <div className="flex items-center mb-4">
               <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center mr-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg">
                   <polyline points="16 18 22 12 16 6" />
                   <polyline points="8 6 2 12 8 18" />
                 </svg>

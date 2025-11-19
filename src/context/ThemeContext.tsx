@@ -16,7 +16,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>('light');
   const [mounted, setMounted] = useState(false);
 
-  // Función para aplicar el tema al DOM
+  
   const applyTheme = (newTheme: Theme) => {
     if (typeof window !== 'undefined') {
       const root = document.documentElement;
@@ -33,17 +33,17 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   };
 
   useEffect(() => {
-    // Marcar como montado para evitar problemas de hidratación
+    
     setMounted(true);
     
-    // Recuperar el tema guardado en localStorage al cargar
+    
     const savedTheme = localStorage.getItem('theme') as Theme | null;
     
     if (savedTheme && (savedTheme === 'light' || savedTheme === 'dark')) {
       setTheme(savedTheme);
       applyTheme(savedTheme);
     } else {
-      // Detectar preferencia del sistema
+      
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       const prefersDark = mediaQuery.matches;
       const systemTheme = prefersDark ? 'dark' : 'light';
@@ -51,11 +51,11 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
       setTheme(systemTheme);
       applyTheme(systemTheme);
       
-      // NO guardar en localStorage aquí para que siga la preferencia del sistema
-      // Escuchar cambios en las preferencias del sistema
+      
+      
       const handleChange = (e: MediaQueryListEvent) => {
         const newSystemTheme = e.matches ? 'dark' : 'light';
-        // Solo cambiar si no hay tema guardado explícitamente
+        
         if (!localStorage.getItem('theme')) {
           setTheme(newSystemTheme);
           applyTheme(newSystemTheme);

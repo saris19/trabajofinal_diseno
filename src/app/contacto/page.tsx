@@ -16,14 +16,14 @@ export default function Contacto() {
   const [error, setError] = useState<string | null>(null);
   return (
     <main className="min-h-screen p-4 md:p-8">
-      {/* Logo */}
+      
       <Link href="/" className="absolute top-4 left-4">
         <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
           <span className="text-primary font-bold text-xl">SN</span>
         </div>
       </Link>
       
-      {/* Language Selector */}
+      
       <LanguageSelector />
       
       <div className="max-w-4xl mx-auto pt-20">
@@ -44,7 +44,7 @@ export default function Contacto() {
                 <h3 className="text-sm font-medium uppercase">{t('contact.email.label')}</h3>
                 <p className="text-sm">{t('contact.email.value')}</p>
               </div>
-              {/* Correo duplicado eliminado */}
+              
             </div>
           </div>
           
@@ -57,7 +57,7 @@ export default function Contacto() {
                 <h3 className="text-sm font-medium uppercase">{t('contact.availability.label')}</h3>
                 <p className="text-sm">{t('contact.availability.value')}</p>
               </div>
-              {/* Número duplicado eliminado */}
+              
             </div>
           </div>
         </div>

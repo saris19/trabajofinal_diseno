@@ -7,13 +7,13 @@ export default function SocialLinks() {
   const { t } = useLanguage();
   return (
     <div className="social-links">
-      <Link href="https://github.com/saris19" target="_blank" aria-label={t('social.github')}>
+      <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
         <Github size={24} />
       </Link>
-      <Link href="https://linkedin.com" target="_blank" aria-label={t('social.linkedin')}>
+      <Link href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
         <Linkedin size={24} />
       </Link>
-      <Link href="https://www.instagram.com/_saranoguera_?igsh=MWxvemo3dHVpcXFuaw%3D%3D&utm_source=qr" target="_blank" aria-label={t('social.instagram')}>
+      <Link href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
         <Instagram size={24} />
       </Link>
     </div>

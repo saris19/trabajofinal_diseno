@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <body className={`${poppins.className} antialiased transition-colors duration-300 bg-[var(--background)] dark:bg-gray-900 text-gray-900 dark:text-white`}>
-        {/* Script para aplicar el tema antes de la hidratación y evitar parpadeos/fallos en móviles */}
+        
         <Script id="init-theme" strategy="beforeInteractive">
           {`
             (function(){

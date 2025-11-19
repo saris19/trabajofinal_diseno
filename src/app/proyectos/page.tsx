@@ -18,7 +18,7 @@ export default function Proyectos() {
         const res = await fetch(pngPath, { method: 'HEAD' });
         if (res.ok) setter(pngPath);
       } catch {
-        // ignore
+        
       }
     };
     check('/project1.png', setImg1);
@@ -27,14 +27,14 @@ export default function Proyectos() {
   }, []);
   return (
     <main className="min-h-screen p-4 md:p-8">
-      {/* Logo */}
+      
       <Link href="/" className="absolute top-4 left-4">
         <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
           <span className="text-primary font-bold text-xl">SN</span>
         </div>
       </Link>
       
-      {/* Language Selector */}
+      
       <LanguageSelector />
       
       <div className="max-w-6xl mx-auto pt-20">
@@ -43,7 +43,7 @@ export default function Proyectos() {
         </h1>
         
         <div className="grid md:grid-cols-3 auto-rows-fr gap-8">
-          {/* Proyecto 1 */}
+          
           <div className="card flex flex-col h-full">
             <div className="h-48 rounded-lg mb-4 overflow-hidden relative">
               <Image src={img1} alt="Proyecto 1" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" priority />
@@ -53,7 +53,7 @@ export default function Proyectos() {
               {t('projects.card.desc1')}
             </p>
             <a 
-              href="https://trabajo-maps.vercel.app/" 
+              href="https://example.com/demo1"
               target="_blank" 
               rel="noopener noreferrer"
               className="btn text-sm w-full flex justify-center"
@@ -63,7 +63,7 @@ export default function Proyectos() {
             </a>
           </div>
           
-          {/* Proyecto 2 */}
+          
           <div className="card flex flex-col h-full">
             <div className="h-48 rounded-lg mb-4 overflow-hidden relative">
               <Image src={img2} alt="Proyecto 2" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
@@ -73,7 +73,7 @@ export default function Proyectos() {
               {t('projects.card.desc2')}
             </p>
             <a 
-              href="https://pasaporte-two.vercel.app/" 
+              href="https://example.com/demo2"
               target="_blank" 
               rel="noopener noreferrer"
               className="btn text-sm w-full flex justify-center"
@@ -83,7 +83,7 @@ export default function Proyectos() {
             </a>
           </div>
           
-          {/* Proyecto 3 */}
+          
           <div className="card flex flex-col h-full">
             <div className="h-48 rounded-lg mb-4 overflow-hidden relative">
               <Image src={img3} alt="Proyecto 3" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
@@ -93,7 +93,7 @@ export default function Proyectos() {
               {t('projects.card.desc3')}
             </p>
             <a 
-              href="https://trabajoexample-git-975724-saray-lucia-noguera-cueltans-projects.vercel.app/es" 
+              href="https://github.com/"
               target="_blank" 
               rel="noopener noreferrer"
               className="btn text-sm w-full flex justify-center"
