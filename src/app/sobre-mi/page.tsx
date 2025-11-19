@@ -6,7 +6,7 @@ import Modal from '@/components/Modal';
 import { useLanguage } from '@/context/LanguageContext';
 import Image from 'next/image';
 import { SiNodedotjs, SiExpress, SiMongodb, SiMysql, SiReact, SiNextdotjs, SiHtml5, SiJavascript, SiTypescript, SiTailwindcss } from 'react-icons/si'
-import { Globe } from 'lucide-react'
+import { Globe, Utensils, Briefcase, Clock, Gamepad } from 'lucide-react'
 
 export default function SobreMi() {
   const { t } = useLanguage();
@@ -126,21 +126,32 @@ export default function SobreMi() {
         title={t('about.info.title')}
       >
         <div className="space-y-6">
-          {/* Gustos */}
+          {/* Gustos en comida */}
           <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 p-6 rounded-xl">
             <div className="flex items-center mb-4">
               <div className="w-10 h-10 bg-purple-500 rounded-lg flex items-center justify-center mr-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z" />
-                </svg>
+                <Utensils size={20} className="text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-purple-700 dark:text-purple-300">{t('about.info.likes')}</h3>
+              <h3 className="text-xl font-semibold text-purple-700 dark:text-purple-300">Gustos en comida</h3>
             </div>
-            <p className="text-gray-700 dark:text-gray-300">{t('about.info.likes.text')}</p>
+            <p className="text-gray-700 dark:text-gray-300">
+              Me encanta la comida italiana (pasta y pizza); disfruto la comida casera y los platos tradicionales colombianos; soy fan de los postres como el chocolate y el cheesecake; y también me gustan opciones saludables como ensaladas, frutas y bowls.
+            </p>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {[
+                'Italiana (pasta y pizza)',
+                'Comida casera',
+                'Tradicional colombiana',
+                'Postres (chocolate, cheesecake)',
+                'Saludable (ensaladas, frutas, bowls)'
+              ].map((item) => (
+                <span key={item} className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 rounded-full text-sm">
+                  {item}
+                </span>
+              ))}
+            </div>
           </div>
-
-          {/* Pasatiempos */}
-          <div className="bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 p-6 rounded-xl">
+          <div className="bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-blue-900/20 p-6 rounded-xl">
             <div className="flex items-center mb-4">
               <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center mr-3">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -152,7 +163,18 @@ export default function SobreMi() {
             <p className="text-gray-700 dark:text-gray-300">{t('about.info.hobbies.text')}</p>
           </div>
 
-          {/* Objetivos */}
+          {/* Qué me gusta hacer en mis tiempos libres */}
+          <div className="bg-gradient-to-r from-indigo-50 to-blue-50 dark:from-indigo-900/20 dark:to-blue-900/20 p-6 rounded-xl">
+            <div className="flex items-center mb-4">
+              <div className="w-10 h-10 bg-indigo-500 rounded-lg flex items-center justify-center mr-3">
+                <Clock size={20} className="text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-indigo-700 dark:text-indigo-300">Qué me gusta hacer en mis tiempos libres</h3>
+            </div>
+            <p className="text-gray-700 dark:text-gray-300">
+              Me gusta descansar escuchando música o viendo series. Disfruto salir a caminar, viajar y conocer nuevos lugares. Me gusta aprender cosas nuevas y explorar temas de tecnología. Paso tiempo leyendo o trabajando en proyectos personales.
+            </p>
+          </div>
           <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-6 rounded-xl">
             <div className="flex items-center mb-4">
               <div className="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center mr-3">
