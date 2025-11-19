@@ -5,6 +5,8 @@ import Link from 'next/link';
 import Modal from '@/components/Modal';
 import { useLanguage } from '@/context/LanguageContext';
 import Image from 'next/image';
+import { SiNodedotjs, SiExpress, SiMongodb, SiMysql, SiReact, SiNextdotjs, SiHtml5, SiJavascript, SiTypescript, SiTailwindcss } from 'react-icons/si'
+import { Globe } from 'lucide-react'
 
 export default function SobreMi() {
   const { t } = useLanguage();
@@ -62,23 +64,23 @@ export default function SobreMi() {
                 <h3 className="text-xl font-medium mb-2">{t('about.skills.backend')}</h3>
                 <ul className="space-y-2">
                    <li className="flex items-center gap-2">
-                     <span className="inline-block w-2 h-2 rounded-full bg-green-500"></span>
+                     <SiNodedotjs size={18} className="text-green-500" />
                      Node.js
                    </li>
                    <li className="flex items-center gap-2">
-                     <span className="inline-block w-2 h-2 rounded-full bg-gray-500"></span>
+                     <SiExpress size={18} className="text-gray-500" />
                      Express
                    </li>
                    <li className="flex items-center gap-2">
-                     <span className="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+                     <SiMongodb size={18} className="text-green-600" />
                      MongoDB
                    </li>
                    <li className="flex items-center gap-2">
-                     <span className="inline-block w-2 h-2 rounded-full bg-blue-500"></span>
+                     <SiMysql size={18} className="text-blue-500" />
                      SQL
                    </li>
                    <li className="flex items-center gap-2">
-                     <span className="inline-block w-2 h-2 rounded-full bg-orange-500"></span>
+                     <Globe size={18} className="text-orange-500" />
                      API REST
                    </li>
                 </ul>
@@ -88,23 +90,26 @@ export default function SobreMi() {
                 <h3 className="text-xl font-medium mb-2">{t('about.skills.frontend')}</h3>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
-                    <span className="inline-block w-2 h-2 rounded-full bg-cyan-500"></span>
+                    <SiReact size={18} className="text-cyan-500" />
                     React
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="inline-block w-2 h-2 rounded-full bg-neutral-900 dark:bg-white"></span>
+                    <SiNextdotjs size={18} className="text-neutral-900 dark:text-white" />
                     Next.js
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="inline-block w-2 h-2 rounded-full bg-orange-600"></span>
+                    <SiHtml5 size={18} className="text-orange-600" />
                     HTML/CSS
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="inline-block w-2 h-2 rounded-full bg-yellow-500"></span>
+                    <div className="flex items-center gap-1">
+                      <SiJavascript size={18} className="text-yellow-500" />
+                      <SiTypescript size={18} className="text-blue-600" />
+                    </div>
                     JavaScript/TypeScript
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="inline-block w-2 h-2 rounded-full bg-teal-500"></span>
+                    <SiTailwindcss size={18} className="text-teal-500" />
                     Tailwind CSS
                   </li>
                 </ul>
